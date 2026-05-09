@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="O Rei do Salgado — Salgados gourmet crocantes e sequinhos, feitos com ingredientes frescos e muito amor. Peça agora e receba em casa!" />
+  <meta name="keywords"
+    content="salgados, coxinha, quibe, bolinha de queijo, enroladinho, salgados gourmet, salgaderia" />
+  <meta property="og:title" content="O Rei do Salgado — Salgados Gourmet" />
+  <meta property="og:description"
+    content="Crocantes por fora, irresistíveis por dentro. Os melhores salgados da cidade." />
+  <title>O Rei do Salgado — Salgados Gourmet</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Favicon emoji fallback -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👑</text></svg>" />
+</head>
+
+<body>
+
+  <header id="header">
+    <nav class="navbar" aria-label="Navegação principal">
+      <a href="#home" class="logo" id="logo-link" aria-label="O Rei do Salgado — Página inicial">
+        <img src="images/logo-v2.png" alt="Logo O Rei do Salgado" class="logo-img" width="52" height="52" />
+        <div class="logo-text">
+          <span>O Rei do Salgado</span>
+          <span>Salgados Gourmet</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#home" id="nav-home">Home</a></li>
+        <li><a href="#historia" id="nav-historia">História</a></li>
+        <li><a href="#cardapio" id="nav-cardapio">Cardápio</a></li>
+        <li><a href="#contato" id="nav-contato">Contato</a></li>
+        <li>
+          <button class="nav-cart" id="nav-cart" aria-label="Carrinho de compras">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+            </svg>
+            <span class="cart-badge" id="cart-badge" aria-label="0 itens">0</span>
+          </button>
+        </li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Menu mobile">
+    <a href="#home" id="mob-home" class="mob-link">Home</a>
+    <a href="#historia" id="mob-historia" class="mob-link">História</a>
+    <a href="#cardapio" id="mob-cardapio" class="mob-link">Cardápio</a>
+    <a href="#contato" id="mob-contato" class="mob-link">Contato</a>
+    <a href="#cardapio" class="btn btn-primary" id="mob-pedir">Peça Agora</a>
+  </nav>
+
+  <main>
+
+    <section id="home" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-grid">
+
+          <!-- Left Content -->
+          <div class="hero-content">
+            <div class="hero-badge" aria-label="Aberto agora">
+              <span class="dot" aria-hidden="true"></span>
+              Aberto Agora· Entrega Disponível
+            </div>
+
+            <h1 class="hero-title" id="hero-heading">
+              Crocantes por fora,
+              <em>irresistíveis</em>
+              por dentro.
+            </h1>
+
+            <p class="hero-desc">
+              Desde 2003, levamos alegria e sabor às mesas da cidade. Feitos
+              na hora, com ingredientes frescos e o segredo de família que
+              ninguém consegue imitar.
+            </p>
+
+            <div class="hero-cta">
+              <a href="#cardapio" class="btn btn-primary" id="hero-cta-btn">
+                Peça Agora
+              </a>
+              <a href="#historia" class="btn btn-outline" id="hero-saiba-btn">
+                Nossa História
+              </a>
+            </div>
+
+            <div class="hero-stats" role="list">
+              <div class="stat" role="listitem">
+                <span class="stat-number" data-target="20" data-suffix="+" data-decimals="0">0+</span>
+                <span class="stat-label">Anos</span>
+              </div>
+              <div class="stat" role="listitem">
+                <span class="stat-number" data-target="50" data-suffix="k+" data-decimals="0">0k+</span>
+                <span class="stat-label">Clientes</span>
+              </div>
+              <div class="stat" role="listitem">
+                <span class="stat-number" data-target="4.9" data-suffix="★" data-decimals="1">0.0★</span>
+                <span class="stat-label">Avaliação</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Hero Carousel -->
+          <div class="hero-image-wrap" aria-label="Galeria de salgados">
+            <div class="hero-image-bg" aria-hidden="true"></div>
+
+            <!-- Carousel Track -->
+            <div class="hero-carousel" id="hero-carousel" aria-roledescription="carrossel">
+              <div class="carousel-track" id="carousel-track">
+
+                <div class="carousel-slide active" role="group" aria-roledescription="slide" aria-label="1 de 5">
+                  <img src="images/hero.png" alt="Bandeja de salgados gourmet sortidos" class="hero-img" width="560"
+                    height="420" loading="eager" />
+                  <div class="slide-label">Sortido Especial</div>
+                </div>
+
+                <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="2 de 5">
+                  <img src="images/coxinha.png" alt="Coxinha de frango crocante e dourada" class="hero-img" width="560"
+                    height="420" loading="lazy" />
+                  <div class="slide-label">Coxinha de Frango — R$ 5,50</div>
+                </div>
+
+                <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="3 de 5">
+                  <img src="images/quibe.png" alt="Quibe frito com temperos árabes" class="hero-img" width="560"
+                    height="420" loading="lazy" />
+                  <div class="slide-label">Quibe Frito — R$ 4,50</div>
+                </div>
+
+                <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="4 de 5">
+                  <img src="images/bolinha-queijo.png" alt="Bolinha de queijo com recheio derretido" class="hero-img"
+                    width="560" height="420" loading="lazy" />
+                  <div class="slide-label">Bolinha de Queijo — R$ 4,00</div>
+                </div>
+
+                <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="5 de 5">
+                  <img src="images/enroladinho.png" alt="Enroladinho de salsicha crocante" class="hero-img" width="560"
+                    height="420" loading="lazy" />
+                  <div class="slide-label">Enroladinho — R$ 3,50</div>
+                </div>
+
+              </div><!-- /carousel-track -->
+
+              <!-- Arrows -->
+              <button class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Slide anterior">&#8249;</button>
+              <button class="carousel-btn carousel-next" id="carousel-next" aria-label="Próximo slide">&#8250;</button>
+
+              <!-- Dots -->
+              <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Navegação do carrossel">
+                <button class="carousel-dot active" id="dot-0" role="tab" aria-selected="true" aria-label="Slide 1"
+                  data-index="0"></button>
+                <button class="carousel-dot" id="dot-1" role="tab" aria-selected="false" aria-label="Slide 2"
+                  data-index="1"></button>
+                <button class="carousel-dot" id="dot-2" role="tab" aria-selected="false" aria-label="Slide 3"
+                  data-index="2"></button>
+                <button class="carousel-dot" id="dot-3" role="tab" aria-selected="false" aria-label="Slide 4"
+                  data-index="3"></button>
+                <button class="carousel-dot" id="dot-4" role="tab" aria-selected="false" aria-label="Slide 5"
+                  data-index="4"></button>
+              </div>
+            </div><!-- /hero-carousel -->
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section id="historia" aria-labelledby="historia-heading">
+      <div class="container">
+        <div class="historia-grid">
+
+          <!-- Image -->
+          <div class="historia-img-wrap fade-in">
+            <img src="images/historia.png" alt="Cozinha familiar onde tudo começou — Dona Maria e sua receita secreta"
+              class="historia-img" width="480" height="600" loading="lazy" />
+            <div class="historia-badge" aria-label="Desde 2003">
+              <span class="badge-year">2003</span>
+              <span class="badge-since">Desde</span>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="historia-content fade-in">
+            <h2 class="section-title" id="historia-heading">Nossa História</h2>
+            <p class="section-subtitle">Uma receita de família que conquistou a cidade</p>
+
+            <p>
+              Era uma tarde de domingo em 2003 quando Dona Maria resolveu
+              fritar coxinhas na cozinha de casa para receber os vizinhos. O
+              que ninguém esperava era que aquele cheiro de massa crocante se
+              espalharia pelos corredores do bairro e atrairia uma fila que
+              chegava à calçada.
+            </p>
+
+            <p>
+              Filha de comerciantes mineiros, ela cresceu entendendo que comida
+              boa tem alma. Cada salgado era sovado à mão, recheado com
+              generosidade e frito na temperatura certa — o segredo para aquele
+              crunch que ninguém consegue reproduzir. O boca a boca tomou conta
+              da cidade, e em menos de dois anos a cozinha caseira se tornou
+              uma salgaderia de verdade.
+            </p>
+
+            <p>
+              Hoje, <strong>O Rei do Salgado</strong> é referência em qualidade,
+              sabor e crocância. Mais de 50 mil clientes atendidos, dezenas de
+              sabores no cardápio e um compromisso que nunca mudou: cada
+              salgado que sai daqui precisa contar uma história deliciosa.
+            </p>
+
+            <ul class="feature-list" aria-label="Nossos diferenciais">
+              <li>
+                <span class="check" aria-hidden="true">✓</span>
+                Ingredientes frescos selecionados diariamente
+              </li>
+              <li>
+                <span class="check" aria-hidden="true">✓</span>
+                Receita original de família desde 2003
+              </li>
+              <li>
+                <span class="check" aria-hidden="true">✓</span>
+                Frituras sequinhas sem excesso de óleo
+              </li>
+              <li>
+                <span class="check" aria-hidden="true">✓</span>
+                Entrega em até 40 minutos quentinho
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section id="cardapio" aria-labelledby="cardapio-heading">
+      <div class="container">
+        <div class="cardapio-header">
+          <h2 class="section-title" id="cardapio-heading">Nosso Cardápio</h2>
+          <p class="section-subtitle">Feitos fresquinhos, fritos na hora. Escolha o seu favorito!</p>
+        </div>
+
+        <!--SALGADOS-->
+        <div class="menu-category">
+          <div class="category-label">
+            <span class="category-icon"></span>
+            <h3>Salgados</h3>
+            <span class="category-line"></span>
+          </div>
+          <div class="cards-carousel-wrap">
+            <button class="cards-btn cards-prev" aria-label="Anterior">&#8249;</button>
+            <div class="cards-viewport">
+              <div class="cards-track">
+                <article class="menu-card" aria-label="Coxinha de Frango">
+                  <div class="card-img-wrap"><img src="images/coxinha.png" alt="Coxinha de frango" width="320"
+                      height="240" loading="lazy" /></div>
+                  <div class="card-body">
+                    <h3 class="card-name">Coxinha de Frango</h3>
+                    <p class="card-desc">O clássico que nunca falha. Peito de frango desfiado com tempero da casa e
+                      massa
+                      crocante.</p>
+                    <div class="card-footer">
+                      <div class="card-price"><small>por</small>R$ 1,50</div><button class="btn-add" id="add-coxinha"
+                        data-item="Coxinha de Frango" data-price="1.50">+</button>
+                    </div>
+                  </div>
+                </article>
+                <article class="menu-card" aria-label="Kibe de Carne">
+                  <div class="card-img-wrap"><img src="images/quibe.png" alt="Quibe frito" width="320" height="240"
+                      loading="lazy" /></div>
+                  <div class="card-body">
+                    <h3 class="card-name">Kibe de Carne</h3>
+                    <p class="card-desc">Receita árabe com carne moída, hortelã e pinhão. Crocância que faz diferença.
+                    </p>
+                    <div class="card-footer">
+                      <div class="card-price"><small>por</small>R$ 1,50</div><button class="btn-add" id="add-kibe"
+                        data-item="Kibe de Carne" data-price="1.50">+</button>
+                    </div>
+                  </div>
+                </article>
+                <article class="menu-card" aria-label="Bolinha de Queijo">
+                  <div class="card-img-wrap"><img src="images/bolinha-queijo.png" alt="Bolinha de queijo" width="320"
+                      height="240" loading="lazy" /></div>
+                  <div class="card-body">
+                    <h3 class="card-name">Bolinha de Queijo</h3>
+                    <p class="card-desc">Muçarela por dentro e parmesão na casquinha. O famoso "cheese pull" garantido.
+                    </p>
+                    <div class="card-footer">
+                      <div class="card-price"><small>por</small>R$ 1,50</div><button class="btn-add" id="add-bolinha"
+                        data-item="Bolinha de Queijo" data-price="1.50">+</button>
+                    </div>
+                  </div>
+                </article>
+                <article class="menu-card" aria-label="Risole de Milho">
+                  <div class="card-img-wrap"><img src="images/risole-milho.png" alt="Risoles de milho" width="320"
+                      height="240" loading="lazy" /></div>
+                  <div class="card-body">
+                    <h3 class="card-name">Risole de Milho</h3>
+                    <p class="card-desc">Creme de milho suave envolvido em uma massa dourada e perfeitamente crocante.
+                    </p>
+                    <div class="card-footer">
+                      <div class="card-price"><small>por</small>R$ 1,50</div><button class="btn-add" id="add-risole"
+                        data-item="Risole de Milho" data-price="1.50">+</button>
+                    </div>
+                  </div>
+                </article>
+                <article class="menu-card" aria-label="Enroladinho de Salsicha">
+                  <div class="card-img-wrap"><img src="images/enroladinho.png" alt="Enroladinho" width="320"
+                      height="240" loading="lazy" /></div>
+                  <div class="card-body">
+                    <h3 class="card-name">Enroladinho</h3>
+                    <p class="card-desc">Massa folhada sequinha abraçando uma salsicha especial temperada. Irresistível!
+                    </p>
+                    <div class="card-footer">
+                      <div class="card-price"><small>por</small>R$ 1,50</div><button class="btn-add"
+                        id="add-enroladinho" data-item="Enroladinho de Salsicha" data-price="1.50">+</button>
+                    </div>
+                  </div>
+                </article>
+                <article class="menu-card" aria-label="Pastel de Queijo">
+                  <div class="card-img-wrap"><img src="images/pastel.png" alt="Pastel de queijo" width="320"
+                      height="240" loading="lazy" /></div>
+                  <div class="card-body">
+                    <h3 class="card-name">Pastel de Queijo</h3>
+                    <p class="card-desc">Massa fininha e crocante com queijo muçarela derretido. Crocante por fora,
+                      cremoso por dentro.</p>
+                    <div class="card-footer">
+                      <div class="card-price"><small>por</small>R$ 5,00</div><button class="btn-add" id="add-pastel"
+                        data-item="Pastel de Queijo" data-price="5.00">+</button>
+                    </div>
+                  </div>
+                </article>
+                <article class="menu-card" aria-label="Croquete de Carne">
+                  <div class="card-img-wrap"><img src="images/croquete.png" alt="Croquete de carne" width="320"
+                      height="240" loading="lazy" /></div>
+                  <div class="card-body">
+                    <h3 class="card-name">Croquete de Carne</h3>
+                    <p class="card-desc">Carne moída com ervas finas, empanada e frita até a crocância perfeita.</p>
+                    <div class="card-footer">
+                      <div class="card-price"><small>por</small>R$ 4,80</div><button class="btn-add" id="add-croquete"
+                        data-item="Croquete de Carne" data-price="4.80">+</button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <button class="cards-btn cards-next" aria-label="Próximo">&#8250;</button>
+          </div>
+        </div>
+
+        <!--  BEBIDA -->
+        <div class="menu-category">
+          <div class="category-label">
+            <span class="category-icon"></span>
+            <h3>Bebidas</h3>
+            <span class="category-line"></span>
+          </div>
+          <div class="cards-carousel-wrap">
+            <button class="cards-btn cards-prev" aria-label="Anterior">&#8249;</button>
+            <div class="cards-viewport">
+              <div class="cards-track">
+                <article class="menu-card" aria-label="Coca-Cola">
+                  <div class="card-img-wrap"><img src="images/coca-cola.png" alt="Coca-Cola" width="320" height="240"
+                      loading="lazy" /></div>
+                  <div class="card-body">
+                    <h3 class="card-name">Coca-Cola</h3>
+                    <p class="card-desc">A clássica e insubstituível. Lata 350ml bem gelada para acompanhar qualquer
+                      salgado.</p>
+                    <div class="card-footer">
+                      <div class="card-price"><small>por</small>R$ 5,00</div><button class="btn-add" id="add-coca"
+                        data-item="Coca-Cola" data-price="5.00">+</button>
+                    </div>
+                  </div>
+                </article>
+                <article class="menu-card" aria-label="Guaraná Antarctica">
+                  <div class="card-img-wrap"><img src="images/guarana.png" alt="Guaraná Antarctica" width="320"
+                      height="240" loading="lazy" /></div>
+                  <div class="card-body">
+                    <h3 class="card-name">Guaraná Antarctica</h3>
+                    <p class="card-desc">O refrigerante mais brasileiro! Lata 350ml com sabor único de guaraná.</p>
+                    <div class="card-footer">
+                      <div class="card-price"><small>por</small>R$ 5,00</div><button class="btn-add" id="add-guarana"
+                        data-item="Guaraná Antarctica" data-price="5.00">+</button>
+                    </div>
+                  </div>
+                </article>
+                <article class="menu-card" aria-label="Suco de Laranja">
+                  <div class="card-img-wrap"><img src="images/suco-laranja.png" alt="Suco de laranja" width="320"
+                      height="240" loading="lazy" /></div>
+                  <div class="card-body">
+                    <h3 class="card-name">Suco de Laranja</h3>
+                    <p class="card-desc">Espremido na hora, sem conservantes. Refrescante, vitamínico e cheio de sabor.
+                    </p>
+                    <div class="card-footer">
+                      <div class="card-price"><small>por</small>R$ 7,00</div><button class="btn-add"
+                        id="add-suco-laranja" data-item="Suco de Laranja" data-price="7.00">+</button>
+                    </div>
+                  </div>
+                </article>
+                <article class="menu-card" aria-label="Água Mineral">
+                  <div class="card-img-wrap"><img src="images/agua.png" alt="Água mineral" width="320" height="240"
+                      loading="lazy" /></div>
+                  <div class="card-body">
+                    <h3 class="card-name">Água Mineral</h3>
+                    <p class="card-desc">500ml, sem gás ou com gás. Bem gelada para refrescar entre um salgado e outro.
+                    </p>
+                    <div class="card-footer">
+                      <div class="card-price"><small>por</small>R$ 3,00</div><button class="btn-add" id="add-agua"
+                        data-item="Água Mineral" data-price="3.00">+</button>
+                    </div>
+                  </div>
+                </article>
+                <article class="menu-card" aria-label="Creme de Galinha">
+                  <div class="card-img-wrap card-img-placeholder" style="--ph-color1:#ff8f00;--ph-color2:#e65100;">🍲
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-name">Creme de Galinha</h3>
+                    <p class="card-desc">Frango desfiado em creme aveludado com ervas frescas. Reconfortante e
+                      delicioso.</p>
+                    <div class="card-footer">
+                      <div class="card-price"><small>por</small>R$ 12,00</div><button class="btn-add"
+                        id="add-creme-galinha" data-item="Creme de Galinha" data-price="12.00">+</button>
+                    </div>
+                  </div>
+                </article>
+                <article class="menu-card" aria-label="Creme de Queijo">
+                  <div class="card-img-wrap card-img-placeholder" style="--ph-color1:#fdd835;--ph-color2:#f9a825;">🧀
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-name">Creme de Queijo</h3>
+                    <p class="card-desc">Creme de queijo gorgonzola com ervas. Cremoso, intenso e irresistível.</p>
+                    <div class="card-footer">
+                      <div class="card-price"><small>por</small>R$ 11,00</div><button class="btn-add"
+                        id="add-creme-queijo" data-item="Creme de Queijo" data-price="11.00">+</button>
+                    </div>
+                  </div>
+                </article>
+                <article class="menu-card" aria-label="Creme de Milho">
+                  <div class="card-img-wrap card-img-placeholder" style="--ph-color1:#ffca28;--ph-color2:#ff8f00;">🌽
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-name">Creme de Milho</h3>
+                    <p class="card-desc">Creme de milho verde com bacon crocante e cebolinha. Suave, aromático e
+                      saboroso.</p>
+                    <div class="card-footer">
+                      <div class="card-price"><small>por</small>R$ 10,00</div><button class="btn-add"
+                        id="add-creme-milho" data-item="Creme de Milho" data-price="10.00">+</button>
+                    </div>
+                  </div>
+                </article>
+                <article class="menu-card" aria-label="Creme de Camarão">
+                  <div class="card-img-wrap card-img-placeholder" style="--ph-color1:#ef6c00;--ph-color2:#bf360c;">🦐
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-name">Creme de Camarão</h3>
+                    <p class="card-desc">Camarão em creme de coco com dendê. Sabor marcante que remete à culinária
+                      baiana.</p>
+                    <div class="card-footer">
+                      <div class="card-price"><small>por</small>R$ 18,00</div><button class="btn-add"
+                        id="add-creme-camarao" data-item="Creme de Camarão" data-price="18.00">+</button>
+                    </div>
+                  </div>
+                </article>
+                <article class="menu-card" aria-label="Cerveja Long Neck">
+                  <div class="card-img-wrap"><img src="images/cerveja.png" alt="Cerveja Long Neck" width="320"
+                      height="240" loading="lazy" /></div>
+                  <div class="card-body">
+                    <h3 class="card-name">Cerveja Long Neck</h3>
+                    <p class="card-desc">Cerveja bem gelada 355ml. Garrafa long neck para aquela tarde de salgado com
+                      amigos.</p>
+                    <div class="card-footer">
+                      <div class="card-price"><small>por</small>R$ 9,00</div><button class="btn-add" id="add-cerveja-ln"
+                        data-item="Cerveja Long Neck" data-price="9.00">+</button>
+                    </div>
+                  </div>
+                </article>
+                <article class="menu-card" aria-label="Cerveja Lata">
+                  <div class="card-img-wrap card-img-placeholder" style="--ph-color1:#e6a817;--ph-color2:#b8860b;">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-name">Cerveja Lata 350ml</h3>
+                    <p class="card-desc">Lata 350ml bem gelada. Prática e refrescante, perfeita para combinar com
+                      salgados.</p>
+                    <div class="card-footer">
+                      <div class="card-price"><small>por</small>R$ 7,00</div><button class="btn-add"
+                        id="add-cerveja-lata" data-item="Cerveja Lata" data-price="7.00">+</button>
+                    </div>
+                  </div>
+                </article>
+                <article class="menu-card" aria-label="Cerveja Zero Álcool">
+                  <div class="card-img-wrap card-img-placeholder" style="--ph-color1:#43a047;--ph-color2:#2e7d32;">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-name">Cerveja Zero Álcool</h3>
+                    <p class="card-desc">Todo o sabor da cerveja sem o álcool. Lata 350ml gelada para quem quer curtir
+                      sem restrições.</p>
+                    <div class="card-footer">
+                      <div class="card-price"><small>por</small>R$ 7,00</div><button class="btn-add"
+                        id="add-cerveja-zero" data-item="Cerveja Zero Álcool" data-price="7.00">+</button>
+                    </div>
+                  </div>
+                </article>
+                <article class="menu-card" aria-label="Chopp Artesanal">
+                  <div class="card-img-wrap card-img-placeholder" style="--ph-color1:#f9a825;--ph-color2:#f57f17;">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-name">Chopp Artesanal</h3>
+                    <p class="card-desc">Chope artesanal gelado 300ml. Cremoso, refrescante e perfeito para o fim de
+                      tarde.</p>
+                    <div class="card-footer">
+                      <div class="card-price"><small>por</small>R$ 12,00</div><button class="btn-add" id="add-chopp"
+                        data-item="Chopp Artesanal" data-price="12.00">+</button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <button class="cards-btn cards-next" aria-label="Próximo">&#8250;</button>
+          </div>
+        </div>
+
+
+        <!--SORVETES  -->
+        <div class="menu-category">
+          <div class="category-label">
+            <span class="category-icon"></span>
+            <h3>Sorvetes</h3>
+            <span class="category-line"></span>
+          </div>
+          <div class="cards-carousel-wrap">
+            <button class="cards-btn cards-prev" aria-label="Anterior">&#8249;</button>
+            <div class="cards-viewport">
+              <div class="cards-track">
+                <article class="menu-card" aria-label="Sorvete de Baunilha">
+                  <div class="card-img-wrap"><img src="images/sorvete.png" alt="Sorvete de baunilha" width="320"
+                      height="240" loading="lazy" /></div>
+                  <div class="card-body">
+                    <h3 class="card-name">Sorvete de Baunilha</h3>
+                    <p class="card-desc">Cremoso sorvete de baunilha com calda de caramelo. O clássico que encerra
+                      qualquer refeição.</p>
+                    <div class="card-footer">
+                      <div class="card-price"><small>por</small>R$ 8,00</div><button class="btn-add"
+                        id="add-sorvete-baunilha" data-item="Sorvete de Baunilha" data-price="8.00">+</button>
+                    </div>
+                  </div>
+                </article>
+                <article class="menu-card" aria-label="Sorvete de Chocolate">
+                  <div class="card-img-wrap card-img-placeholder" style="--ph-color1:#5d4037;--ph-color2:#3e2723;">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-name">Sorvete de Chocolate</h3>
+                    <p class="card-desc">Sorvete intenso de chocolate belga com pedaços de cacau. Irresistível e
+                      cremoso.</p>
+                    <div class="card-footer">
+                      <div class="card-price"><small>por</small>R$ 8,00</div><button class="btn-add"
+                        id="add-sorvete-choc" data-item="Sorvete de Chocolate" data-price="8.00">+</button>
+                    </div>
+                  </div>
+                </article>
+                <article class="menu-card" aria-label="Sorvete de Morango">
+                  <div class="card-img-wrap card-img-placeholder" style="--ph-color1:#e91e63;--ph-color2:#880e4f;">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-name">Sorvete de Morango</h3>
+                    <p class="card-desc">Morango fresco batido com creme. Refrescante, leve e com pedacinhos de morango.
+                    </p>
+                    <div class="card-footer">
+                      <div class="card-price"><small>por</small>R$ 8,00</div><button class="btn-add"
+                        id="add-sorvete-morango" data-item="Sorvete de Morango" data-price="8.00">+</button>
+                    </div>
+                  </div>
+                </article>
+                <article class="menu-card" aria-label="Sorvete de Creme">
+                  <div class="card-img-wrap card-img-placeholder" style="--ph-color1:#fff176;--ph-color2:#f9a825;">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-name">Sorvete de Creme</h3>
+                    <p class="card-desc">Sorvete de creme puro, suave e aveludado. Perfeito para combinar com qualquer
+                      calda.</p>
+                    <div class="card-footer">
+                      <div class="card-price"><small>por</small>R$ 8,00</div><button class="btn-add"
+                        id="add-sorvete-creme" data-item="Sorvete de Creme" data-price="8.00">+</button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <button class="cards-btn cards-next" aria-label="Próximo">&#8250;</button>
+          </div>
+        </div>
+
+      </div>
+  </main>
+
+
+
+
+  <!-- ══════════════════════
+       NEWSLETTER
+  ══════════════════════ -->
+  <section id="newsletter" class="newsletter-section fade-in">
+    <div class="container">
+      <div class="newsletter-card">
+        <div class="newsletter-content">
+          <span class="newsletter-badge">Promoções Exclusivas</span>
+          <h2>Receba Nossas Novidades</h2>
+          <p>Cadastre seu e-mail para receber ofertas, cupons de desconto e saber primeiro quando tivermos salgados novos!</p>
+        </div>
+        <form class="newsletter-form" id="newsletter-form">
+          <div class="input-group">
+            <input type="email" id="news-email" placeholder="Seu melhor e-mail" required aria-label="E-mail para newsletter">
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+          </div>
+          <p class="form-privacy">Respeitamos sua privacidade. Cancele quando quiser.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!--  FOOTER / CONTATO
+  -->
+  <footer id="contato" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#home" class="logo" aria-label="O Rei do Salgado — Topo da página">
+            <img src="images/logo-v2.png" alt="Logo O Rei do Salgado" class="logo-img" width="52" height="52" />
+            <div class="logo-text">
+              <span>O Rei do Salgado</span>
+              <span>Salgados Gourmet</span>
+            </div>
+          </a>
+          <p>
+            Mais de 20 anos fritando alegria e levando sabor às mesas
+            da cidade. Feitos com amor, entregues com cuidado.
+          </p>
+          <nav aria-label="Redes sociais">
+            <div class="social-links">
+              <a href="#" class="social-link" id="social-instagram" aria-label="Instagram" title="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-instagram">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
+              </a>
+              <a href="#" class="social-link" id="social-whatsapp" aria-label="WhatsApp" title="WhatsApp">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-whatsapp">
+                  <path
+                    d="M22 12A10 10 0 0 1 12 22a9.94 9.94 0 0 1-5.24-1.49L2 22l1.49-4.76A9.94 9.94 0 0 1 2 12C2 6.48 6.48 2 12 2s10 4.48 10 10Z" />
+                  <path
+                    d="M17.49 15.3a.84.84 0 0 1 0 1.21l-1.07 1.07a1.69 1.69 0 0 1-2.1.26 13 13 0 0 1-5.11-5.11 1.69 1.69 0 0 1 .26-2.1l1.07-1.07a.84.84 0 0 1 1.21 0l2 2a.84.84 0 0 1 0 1.21l-.73.73a.36.36 0 0 0 0 .5 7.6 7.6 0 0 0 2.29 2.29.36.36 0 0 0 .5 0z" />
+                </svg>
+              </a>
+              <a href="#" class="social-link" id="social-tiktok" aria-label="TikTok" title="TikTok">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-music">
+                  <path d="M21 8V2a5 5 0 0 0-5 5" />
+                  <path d="M9 12a4 4 0 1 0 4 4V2" />
+                </svg>
+              </a>
+              <a href="https://github.com/Matheus-Ceciliano" class="social-link" id="social-github" aria-label="GitHub"
+                title="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-github">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+              </a>
+            </div>
+          </nav>
+        </div>
+
+        <!-- Links -->
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#home" id="foot-home">→ Home</a></li>
+            <li><a href="#historia" id="foot-historia">→ Nossa História</a></li>
+            <li><a href="#cardapio" id="foot-cardapio">→ Cardápio</a></li>
+            <li><a href="#contato" id="foot-contato">→ Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- Contato -->
+        <div class="footer-col">
+          <h4>Onde Estamos</h4>
+          <address class="footer-address" style="font-style:normal;">
+            <ul>
+              <li>
+                <span aria-hidden="true"></span>
+                <span>Rua dos Salgados, 303<br>Centro Goiânia, GO</span>
+              </li>
+              <li>
+                <span aria-hidden="true"></span>
+                <span><a href="tel:+5562985653861" id="foot-tel" style="color:inherit;text-decoration:none;">(62)
+                    98565-3861</a></span>
+              </li>
+              <li>
+                <span aria-hidden="true"></span>
+                <span>Seg–Sex: 10h–22h<br>Sáb–Dom: 09h–23h</span>
+              </li>
+              <li>
+                <span aria-hidden="true"></span>
+                <span><a href="mailto:oi@oreidosalgado.com.br" id="foot-email"
+                    style="color:inherit;text-decoration:none;">oi@oreidosalgado.com.br</a></span>
+              </li>
+            </ul>
+          </address>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © 2024 <a href="#home">O Rei do Salgado</a>. Todos os direitos reservados.
+        </p>
+        <p>Feito com ❤️ e muito carinho em Goiânia</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="alert" aria-live="polite" aria-atomic="true">
+    <span class="toast-icon" aria-hidden="true">🛒</span>
+    <span id="toast-msg">Item adicionado ao carrinho!</span>
+  </div>
+
+
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/5562985653861?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido." class="whatsapp-float"
+    target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .006 5.408 0 12.045c0 2.121.54 4.192 1.563 6.013L0 24l6.102-1.601a11.832 11.832 0 005.946 1.586h.005c6.634 0 12.041-5.408 12.045-12.048a11.82 11.82 0 00-3.536-8.455z" />
+    </svg>
+    <span class="whatsapp-tooltip">Peça agora!</span>
+  </a>
+
+  <!-- Cart Drawer Overlay -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <!-- Cart Drawer -->
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <div class="cart-header-left">
+        <h3>Seu Carrinho</h3>
+        <button class="btn-clear-cart" id="clear-cart-btn">Esvaziar</button>
+      </div>
+      <button class="btn-close-cart" id="close-cart" aria-label="Fechar carrinho">&times;</button>
+    </div>
+
+    <div class="cart-body" id="cart-items-container">
+      <div class="cart-empty-msg">Seu carrinho está vazio 🥟</div>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total</span>
+        <span id="cart-total-value">R$ 0,00</span>
+      </div>
+      <button class="btn btn-primary btn-checkout" id="checkout-btn">Finalizar Pedido</button>
+      <p class="cart-disclaimer">O pedido será enviado via WhatsApp</p>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
