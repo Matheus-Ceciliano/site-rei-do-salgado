@@ -1393,13 +1393,22 @@ footer {
     order: -1;
   }
 
-  .hero-img {
+  .hero-carousel {
     max-width: 100%;
+    border-radius: 16px; /* Slightly smaller radius for mobile */
+  }
+
+  .hero-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16/9; /* More panoramic for mobile */
   }
 
   .hero-badge-float {
-    left: 0;
+    left: 10px;
     bottom: -8px;
+    padding: 10px 16px;
   }
 
   .historia-grid {
